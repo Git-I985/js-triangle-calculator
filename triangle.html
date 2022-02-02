@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: fit-content;
+            position: relative;
+        }
+
+        .inputs-container {
+            display: flex;
+            margin-bottom: 1rem;
+            justify-content: space-between;
+        }
+
+        input {
+            padding: 1rem;
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            width: 100%;
+            border: 1px solid gray;
+        }
+
+        input:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        @media (max-width: 700px) {
+            .inputs-container {
+                flex-wrap: wrap;
+            }
+
+            input {
+                margin: 0 0 1rem 0 !important;
+            }
+
+            body {
+                padding: 0 1rem;
+            }
+        }
+
+        button {
+            padding: 1rem;
+            width: 100%;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+        }
+
+        .result {
+            position: absolute;
+            bottom: calc(100% + 1rem);
+            padding: 1rem 0;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.2rem;
+            background-color: #f1f1f1;
+            color: #5c5c5c;
+        }
+
+        a, a:visited {
+            color: gray;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: dodgerblue;
+        }
+        .form-footer {
+            text-align: center;
+        }
+        .form-footer > * {
+            margin-top: 1rem;
+            display: block;
+        }
+
+        p {
+            color: lightgray;
+        }
+    </style>
+</head>
+<body>
+<form action="#">
+    <div class="result"></div>
+    <div class="inputs-container">
+        <input type="number" step="any" placeholder="сторона a" required>
+        <input type="number" step="any" placeholder="сторона b" required>
+        <input type="number" step="any" placeholder="сторона c" required>
+    </div>
+    <button type="submit">Посчитать треугольник</button>
+    <div class="form-footer">
+        <a href="https://www.calc.ru/raschet-treugolnika.html" target="_blank">Сверить значения на другом сервисе</a>
+        <p>Эдуард Коновалов &copy; 2022</p>
+    </div>
+</form>
+<script src="triangle.js"></script>
+</body>
+</html>

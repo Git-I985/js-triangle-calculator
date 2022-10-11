@@ -4,6 +4,7 @@
 // TODO interface
 // TODO canvas draw triangle
 // TODO TS
+// MAYBE TODO loadash
 
 Array.prototype.withoutElementAtIndex = function (excludedElementIndex) {
     return this.filter((item, itemIndex) => itemIndex !== excludedElementIndex)

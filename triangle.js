@@ -3,6 +3,7 @@
 // TODO deploy on gihub io
 // TODO interface
 // TODO canvas draw triangle
+// TODO TS
 
 Array.prototype.withoutElementAtIndex = function (excludedElementIndex) {
     return this.filter((item, itemIndex) => itemIndex !== excludedElementIndex)
